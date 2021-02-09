@@ -35,7 +35,7 @@ public class AtmService {
 		
 		if(foundAccount == null) return "Картата е невалидна";
 		
-		double accountBalance = foundAccount.getBalance();
+		double accountBalance = foundAccount.getBalance()
 		double amountLeft = accountBalance - Double.parseDouble(amount);
 		
 		if(amountLeft < 0) return "Недостик на средства";
