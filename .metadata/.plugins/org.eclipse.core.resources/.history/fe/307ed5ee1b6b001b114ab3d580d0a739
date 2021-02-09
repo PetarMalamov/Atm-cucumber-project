@@ -1,0 +1,46 @@
+package Models;
+
+public class AtmModel {
+	
+	private String cardNumber;
+	private String selectedOption;
+	private String amount;
+	private String pin;
+	private String newPin;
+	private String responseMessage;;
+
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+		System.out.println("Добре дошли!");
+	}
+
+	public void setOption(String optiion) {
+		this.selectedOption = optiion;
+	}
+
+	public void setAmount(String amount) {
+		this.amount = amount;
+	}
+
+	public void setPin(String pin) {
+		this.pin = pin;
+	}
+
+	public void setNewPin(String newPin) {
+		this.newPin = newPin;
+	}
+
+	public void handleConfirm() {
+//		this.responseMessage TODO  
+		System.out.println("cardNumber " + cardNumber);
+		System.out.println("selectedOption "+ selectedOption);
+		System.out.println("amount "+amount);
+		System.out.println("pin "+ pin);
+		System.out.println("newPin "+ newPin);
+		System.out.println("responseMessage " + responseMessage);
+	}
+	
+	public String getConfirmMessage() {
+		return this.responseMessage;
+	}
+}

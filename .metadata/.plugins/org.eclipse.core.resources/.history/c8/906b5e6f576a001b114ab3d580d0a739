@@ -1,0 +1,21 @@
+package fmi.pu;
+
+import java.util.ArrayList;
+
+public class Atm {
+
+	private ArrayList<Cards> cards;
+
+	public Atm() {
+	}
+	
+	public void initialize() {
+		Cards card1 = new Cards("asd123","1234",40000);
+		Cards card2 = new Cards("asd456","4312",120);
+		Cards card3 = new Cards("asd789","2233",312);
+		cards.add(card1);
+		cards.add(card2);
+		cards.add(card3);
+	}
+
+}

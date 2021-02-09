@@ -1,0 +1,18 @@
+package fmi.pu.Services;
+
+public class AtmService {
+
+	public static String handleOption(String option,String cardNumber,String amount,String pin, String newPin) {
+		switch(option) {
+			case "теглене на пари":
+				return "Успешна транзакция";
+			default:
+				return "Няма намерена опция";
+		}
+		
+	}
+	
+	public String WithdrawalMoney(String cardNumber,String amount,String pin) {
+		return pin;
+	}
+}

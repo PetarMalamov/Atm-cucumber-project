@@ -1,0 +1,30 @@
+package fmi.pu.Services;
+
+import fmi.pu.Atm;
+
+public class AtmService {
+	
+	static Atm atm = new Atm();
+
+	public static String handleOption(String option,String cardNumber,String amount,String pin, String newPin) {
+		switch(option) {
+			case "теглене на пари":
+				return withdrawalMoney(cardNumber,amount,pin);
+			case "Смяна на пин код":
+				return changePin(cardNumber,pin,newPin); 
+			default:
+				return "Няма намерена опция";
+		}
+		
+	}
+	
+	public static String withdrawalMoney(String cardNumber,String amount,String pin) {
+		atm.Initialize();
+		System.out.println(atm.withdrawal(cardNumber,Double.parseDouble(amount),pin));
+		return "Успешна трабзакция";
+	}
+	
+	public static String changePin(String cardNumber,String pin,String newPin) {
+		return "Смяната на паролата беше успешна";
+	}
+}

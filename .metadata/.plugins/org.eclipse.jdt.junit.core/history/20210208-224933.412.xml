@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AtmTester" project="AtmProject" tests="6" started="6" failures="2" errors="0" ignored="0">
+  <testsuite name="AtmTester" time="0.002">
+    <testsuite name="Feature: Теглене на пари" time="0.002">
+      <testsuite name="Scenario: Теглене на пари от банкомат" time="0.002" incomplete="true">
+        <failure>
+          <expected>Успешна транзакция</expected>
+          <actual>asd</actual>
+          org.junit.ComparisonFailure: expected:&lt;[Успешна транзакция]&gt; but was:&lt;[asd]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at Steps.DisplayMessage(Steps.java:44)&#13;
+	at ✽.Then Показване на съобщение "Успешна транзакция"(atm.feature:9)&#13;
+&#13;
+
+        </failure>
+        <testcase name="Given Поставяне на кредитна/дебитна карта в банкомата" classname="Scenario: Теглене на пари от банкомат" time="0.001"/>
+        <testcase name="And Избиране на опция &quot;теглене на пари&quot;" classname="Scenario: Теглене на пари от банкомат" time="0.0"/>
+        <testcase name="When списък със суми" classname="Scenario: Теглене на пари от банкомат" time="0.0"/>
+        <testcase name="And Избиране на сума &quot;222&quot;" classname="Scenario: Теглене на пари от банкомат" time="0.0"/>
+        <testcase name="And Въвеждане на пин &quot;1233&quot;" classname="Scenario: Теглене на пари от банкомат" time="0.0"/>
+        <testcase name="Then Показване на съобщение &quot;Успешна транзакция&quot;" classname="Scenario: Теглене на пари от банкомат" time="0.0">
+          <failure>
+            <expected>Успешна транзакция</expected>
+            <actual>asd</actual>
+            org.junit.ComparisonFailure: expected:&lt;[Успешна транзакция]&gt; but was:&lt;[asd]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at Steps.DisplayMessage(Steps.java:44)&#13;
+	at ✽.Then Показване на съобщение "Успешна транзакция"(atm.feature:9)&#13;
+&#13;
+
+          </failure>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,44 @@
+import Models.AtmModel;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class Steps {
+	AtmModel atmModel = new AtmModel();
+	@Given("^Поставяне на кредитна/дебитна карта в банкомата$")
+public void InsertCard() throws Throwable {
+	
+}
+
+@Given("^Избиране на опция \"([^\"]*)\"$")
+public void ChooseAtmOption(String arg1) throws Throwable {
+	// Write code here that turns the phrase above into concrete actions
+	throw new PendingException();
+}
+
+@When("^списък със суми$")
+public void ListWithAmount() throws Throwable {
+	// Write code here that turns the phrase above into concrete actions
+	throw new PendingException();
+}
+
+@When("^Избиране на сума \"([^\"]*)\"$")
+public void ChooseAmount(String arg1) throws Throwable {
+	// Write code here that turns the phrase above into concrete actions
+	throw new PendingException();
+}
+
+@When("^Въвеждане на пин$")
+public void EnterPin() throws Throwable {
+	// Write code here that turns the phrase above into concrete actions
+	throw new PendingException();
+}
+
+@Then("^Показване на съобщение \"([^\"]*)\"$")
+public void DisplayMessage(String arg1) throws Throwable {
+	// Write code here that turns the phrase above into concrete actions
+		throw new PendingException();
+	}
+
+}

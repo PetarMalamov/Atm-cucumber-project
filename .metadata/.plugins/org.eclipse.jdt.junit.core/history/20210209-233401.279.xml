@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AtmTester" project="AtmProject" tests="30" started="30" failures="8" errors="0" ignored="0">
+  <testsuite name="AtmTester" time="0.228">
+    <testsuite name="Feature: Теглене на пари" time="0.228">
+      <testsuite name="Scenario: Теглене на пари от банкомат с валидни данни" time="0.015">
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.005"/>
+        <testcase name="And Избере опция &quot;теглене на пари&quot;" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.002"/>
+        <testcase name="When Избере сума &quot;222&quot;" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.002"/>
+        <testcase name="And Въведе пин код &quot;1233&quot;" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.002"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.003"/>
+        <testcase name="Then Показване на съобщение &quot;Успешна транзакция&quot;" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.001"/>
+      </testsuite>
+      <testsuite name="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.031" incomplete="true">
+        <failure>
+          <expected>Невалиден пин код</expected>
+          <actual>Успешна транзакция</actual>
+          org.junit.ComparisonFailure: expected:&lt;[Невалиден пин код]&gt; but was:&lt;[Успешна транзакция]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at Steps.ShowEndMessage(Steps.java:45)&#13;
+	at ✽.Then Показване на съобщение "Невалиден пин код"(atm.feature:17)&#13;
+&#13;
+
+        </failure>
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.003"/>
+        <testcase name="And Избере опция &quot;теглене на пари&quot;" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.003"/>
+        <testcase name="When Избере сума &quot;222&quot;" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.011"/>
+        <testcase name="And Въведе пин код &quot;1233&quot;" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.001"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.011"/>
+        <testcase name="Then Показване на съобщение &quot;Невалиден пин код&quot;" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.002">
+          <failure>
+            <expected>Невалиден пин код</expected>
+            <actual>Успешна транзакция</actual>
+            org.junit.ComparisonFailure: expected:&lt;[Невалиден пин код]&gt; but was:&lt;[Успешна транзакция]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at Steps.ShowEndMessage(Steps.java:45)&#13;
+	at ✽.Then Показване на съобщение "Невалиден пин код"(atm.feature:17)&#13;
+&#13;
+
+          </failure>
+        </testcase>
+      </testsuite>
+      <testsuite name="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.041" incomplete="true">
+        <failure>
+          <expected>Недостик на средства</expected>
+          <actual>Успешна транзакция</actual>
+          org.junit.ComparisonFailure: expected:&lt;[Недостик на средства]&gt; but was:&lt;[Успешна транзакция]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at Steps.ShowEndMessage(Steps.java:45)&#13;
+	at ✽.Then Показване на съобщение "Недостик на средства"(atm.feature:25)&#13;
+&#13;
+
+        </failure>
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.002"/>
+        <testcase name="And Избере опция &quot;теглене на пари&quot;" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.004"/>
+        <testcase name="When Избере сума &quot;222&quot;" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.002"/>
+        <testcase name="And Въведе пин код &quot;1233&quot;" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.015"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.007"/>
+        <testcase name="Then Показване на съобщение &quot;Недостик на средства&quot;" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.0">
+          <failure>
+            <expected>Недостик на средства</expected>
+            <actual>Успешна транзакция</actual>
+            org.junit.ComparisonFailure: expected:&lt;[Недостик на средства]&gt; but was:&lt;[Успешна транзакция]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at Steps.ShowEndMessage(Steps.java:45)&#13;
+	at ✽.Then Показване на съобщение "Недостик на средства"(atm.feature:25)&#13;
+&#13;
+
+          </failure>
+        </testcase>
+      </testsuite>
+      <testsuite name="Scenario: Смяна на пин код" time="0.017" incomplete="true">
+        <failure>
+          <expected>Смяната на паролата беше успешна</expected>
+          <actual>Няма намерена опция</actual>
+          org.junit.ComparisonFailure: expected:&lt;[Смяната на паролата беше успешна]&gt; but was:&lt;[Няма намерена опция]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at Steps.ShowEndMessage(Steps.java:45)&#13;
+	at ✽.Then Показване на съобщение "Смяната на паролата беше успешна"(atm.feature:33)&#13;
+&#13;
+
+        </failure>
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Смяна на пин код" time="0.001"/>
+        <testcase name="And Избере опция &quot;Смяна на пин код&quot;" classname="Scenario: Смяна на пин код" time="0.004"/>
+        <testcase name="When Въведе пин код &quot;1234&quot;" classname="Scenario: Смяна на пин код" time="0.003"/>
+        <testcase name="And Въведе нов пин код &quot;12333&quot;" classname="Scenario: Смяна на пин код" time="0.005"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Смяна на пин код" time="0.003"/>
+        <testcase name="Then Показване на съобщение &quot;Смяната на паролата беше успешна&quot;" classname="Scenario: Смяна на пин код" time="0.001">
+          <failure>
+            <expected>Смяната на паролата беше успешна</expected>
+            <actual>Няма намерена опция</actual>
+            org.junit.ComparisonFailure: expected:&lt;[Смяната на паролата беше успешна]&gt; but was:&lt;[Няма намерена опция]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at Steps.ShowEndMessage(Steps.java:45)&#13;
+	at ✽.Then Показване на съобщение "Смяната на паролата беше успешна"(atm.feature:33)&#13;
+&#13;
+
+          </failure>
+        </testcase>
+      </testsuite>
+      <testsuite name="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.007" incomplete="true">
+        <failure>
+          <expected>Смяната на паролата беше неуспешна,не може новата и старата парола да са еднакви</expected>
+          <actual>Няма намерена опция</actual>
+          org.junit.ComparisonFailure: expected:&lt;[Смяната на паролата беше неуспешна,не може новата и старата парола да са еднакви]&gt; but was:&lt;[Няма намерена опция]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at Steps.ShowEndMessage(Steps.java:45)&#13;
+	at ✽.Then Показване на съобщение "Смяната на паролата беше неуспешна,не може новата и старата парола да са еднакви"(atm.feature:41)&#13;
+&#13;
+
+        </failure>
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.002"/>
+        <testcase name="And Избере опция &quot;Смяна на пин код&quot;" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.001"/>
+        <testcase name="When Въведе пин код &quot;1234&quot;" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.001"/>
+        <testcase name="And Въведе нов пин код &quot;1234&quot;" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.001"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.001"/>
+        <testcase name="Then Показване на съобщение &quot;Смяната на паролата беше неуспешна,не може новата и старата парола да са еднакви&quot;" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.001">
+          <failure>
+            <expected>Смяната на паролата беше неуспешна,не може новата и старата парола да са еднакви</expected>
+            <actual>Няма намерена опция</actual>
+            org.junit.ComparisonFailure: expected:&lt;[Смяната на паролата беше неуспешна,не може новата и старата парола да са еднакви]&gt; but was:&lt;[Няма намерена опция]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at Steps.ShowEndMessage(Steps.java:45)&#13;
+	at ✽.Then Показване на съобщение "Смяната на паролата беше неуспешна,не може новата и старата парола да са еднакви"(atm.feature:41)&#13;
+&#13;
+
+          </failure>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

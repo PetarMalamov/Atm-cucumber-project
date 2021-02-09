@@ -1,0 +1,9 @@
+package fmi.pu.Services;
+
+public class AtmService {
+
+	public static String hndleOption(String option,String cardNumber,String amount,String pin, String newPin) {
+		return "Успешна транзакция;
+		
+	}
+}

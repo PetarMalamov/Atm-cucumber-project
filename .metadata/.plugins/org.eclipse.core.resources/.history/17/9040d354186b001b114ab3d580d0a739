@@ -1,0 +1,68 @@
+package fmi.pu;
+
+import java.util.ArrayList;
+
+public class Atm {
+
+	private ArrayList<Cards> cards;
+
+	public Atm() {
+	}
+	
+	public void Initialize() {
+		Cards card1 = new Cards("asd123","1234",40000);
+		Cards card2 = new Cards("asd456","4312",120);
+		Cards card3 = new Cards("asd789","2233",312);
+		cards.add(card1);
+		cards.add(card2);
+		cards.add(card3);
+	}
+	
+	private Cards FindCard(String number) {
+		Cards foundCard = null;		
+		for(Cards card : cards) {
+			if(card.getNumber().equals(number)) foundCard = card; 
+		}
+		return foundCard;
+	}
+	
+	public String Withdrawal(String number,double amount) {
+		Cards foundCard = FindCard(number);		
+		
+		if(foundCard==null) return "Няма намерена карта";
+		
+		double cardAmount = foundCard.getAmount();
+		double amountLeft = cardAmount - amount;
+		
+		if(amount < 0) return "Няма достатъчно средства";
+		
+		foundCard.setAmount(amountLeft);
+		return "Транзакцията беше успешна";
+	}
+	
+	public String Deposit(String number,double amount) {
+		Cards foundCard = FindCard(number);		
+		
+		if(foundCard==null) return "Няма намерена карта";
+		
+		double cardAmount = foundCard.getAmount();
+		double newAmount = cardAmount + amount;
+		
+		foundCard.setAmount(newAmount);
+		return "Транзакцията беше успешна";
+	}
+	
+	public String ChangePin(String number,String pin) {
+		Cards foundCard = FindCard(number);		
+		
+		if(foundCard==null) return "Няма намерена карта";
+		
+		String cardPin = foundCard.getPin();
+		
+		if(cardPin.equals(pin)) return "Новата пароала е същата като старата";
+		
+		foundCard.setPin(pin);
+		return "Смяната на паралота беше успешна";
+	}
+
+}

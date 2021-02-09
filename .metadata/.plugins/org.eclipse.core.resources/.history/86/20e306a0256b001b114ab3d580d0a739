@@ -1,0 +1,53 @@
+package fmi.pu.Services;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+import fmi.pu.Atm;
+import fmi.pu.Card;
+
+public class AtmService {
+	
+	static Atm atm = new Atm();
+
+	public static String handleOption(String option,String cardNumber,String amount,String pin, String newPin) {
+		switch(option) {
+			case "теглене на пари":
+				return withdrawalMoney(cardNumber,amount,pin);
+			case "Смяна на пин код":
+				return changePin(cardNumber,pin,newPin); 
+			default:
+				return "Няма намерена опция";
+		}
+		
+	}
+	
+	public static String withdrawalMoney(String cardNumber,String amount,String pin) {
+		ArrayList<Card> cards = getCards();
+		System.out.println("da"+findCard(cards,"da"));
+		return "Успешна трабзакция";
+	}
+	
+	public static String changePin(String cardNumber,String pin,String newPin) {
+		return "Смяната на паролата беше успешна";
+	}
+	
+	public static ArrayList<Card> getCards(){
+		Card card1 = new Card("asd123","1234",40000);
+		Card card2 = new Card("asd456","4312",120);
+		Card card3 = new Card("asd789","2233",312);
+		ArrayList<Card> cards = new ArrayList<Card>();
+		cards.add(card1);
+		cards.add(card2);
+		cards.add(card3);
+		return cards;
+	}
+	
+	private static Card findCard(ArrayList<Card> cards,String number) {
+		Card foundCard = null;		
+		for(Card card : cards) {
+			if(card.getNumber().equals(number)) foundCard = card; 
+		}
+		return foundCard;
+	}
+}

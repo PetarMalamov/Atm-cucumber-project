@@ -1,0 +1,28 @@
+package Models;
+
+public class AtmModel {
+
+	public void creditCardInsertedMessage() {
+		System.out.println("Картата е поставена");
+	}
+
+	public void printChoosenOption(String optiion) {
+		System.out.println("Избраната опция е : " + optiion);
+	}
+
+	public void printListWithAmounts() {
+		System.out.println("Избери сума от списъка 123,321,234,345");
+	}
+
+	public void printChoosenAmount(String optiion) {
+		System.out.println("Избраната сума е :"+ optiion);
+	}
+
+	public void printPin(String optiion) {
+		System.out.println("Пин кода е :"+ optiion);
+	}
+
+	public void printEndMessage(String optiion) {
+		System.out.println("Успешна транsdзакция");
+	}
+}

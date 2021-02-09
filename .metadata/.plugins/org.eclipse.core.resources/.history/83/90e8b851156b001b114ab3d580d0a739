@@ -1,0 +1,58 @@
+import static org.junit.Assert.assertEquals;
+
+import Models.AtmModel;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class Steps {
+	AtmModel atmModel = new AtmModel();
+	
+	@Given("^Потребителят поставя кредитна/дебитна карта с номер \"([^\"]*)\" в банкомата$")
+	public void потребителят_поставя_кредитна_дебитна_карта_с_номер_в_банкомата(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	}
+
+	@Given("^Избере опция \"([^\"]*)\"$")
+	public void избере_опция(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	}
+
+	@When("^Избере сума \"([^\"]*)\"$")
+	public void избере_сума(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	}
+
+	@When("^Въведе пин код \"([^\"]*)\"$")
+	public void EnterPin(String arg1) throws Throwable {
+	}
+
+	@When("^Натисне бутона за потвърждение$")
+	public void натисне_бутона_за_потвърждение() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	}
+
+
+	@When("^Въведе нов пин код\"([^\"]*)\"$")
+	public void EnterNewPin(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	}
+	
+	@When("^Въведе пин код\"([^\"]*)\"$")
+	public void въведе_пин_код(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	}
+
+	@When("^Въведе нов пин код \"([^\"]*)\"$")
+	public void въведе_нов_пин_код(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	}
+	
+	
+	@Then("^Показване на съобщение \"([^\"]*)\"$")
+	public void показване_на_съобщение(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	}
+
+}
