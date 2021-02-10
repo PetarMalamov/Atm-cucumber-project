@@ -49,7 +49,7 @@ formatter.match({
   "location": "ChangePinSteps.InsertCard(String)"
 });
 formatter.result({
-  "duration": 199512400,
+  "duration": 308775000,
   "status": "passed"
 });
 formatter.match({
@@ -62,7 +62,7 @@ formatter.match({
   "location": "ChangePinSteps.EnterOldPin(String)"
 });
 formatter.result({
-  "duration": 69000,
+  "duration": 104000,
   "status": "passed"
 });
 formatter.match({
@@ -75,14 +75,14 @@ formatter.match({
   "location": "ChangePinSteps.EnterNewPin(String)"
 });
 formatter.result({
-  "duration": 73700,
+  "duration": 107800,
   "status": "passed"
 });
 formatter.match({
   "location": "ChangePinSteps.ClickConfirmButton()"
 });
 formatter.result({
-  "duration": 113400,
+  "duration": 130700,
   "status": "passed"
 });
 formatter.match({
@@ -95,7 +95,7 @@ formatter.match({
   "location": "ChangePinSteps.ShowEndMessage(String)"
 });
 formatter.result({
-  "duration": 1584100,
+  "duration": 1870000,
   "status": "passed"
 });
 formatter.scenario({
@@ -141,7 +141,7 @@ formatter.match({
   "location": "ChangePinSteps.InsertCard(String)"
 });
 formatter.result({
-  "duration": 244700,
+  "duration": 270900,
   "status": "passed"
 });
 formatter.match({
@@ -154,7 +154,7 @@ formatter.match({
   "location": "ChangePinSteps.EnterOldPin(String)"
 });
 formatter.result({
-  "duration": 59700,
+  "duration": 89900,
   "status": "passed"
 });
 formatter.match({
@@ -167,14 +167,14 @@ formatter.match({
   "location": "ChangePinSteps.EnterNewPin(String)"
 });
 formatter.result({
-  "duration": 61800,
+  "duration": 78800,
   "status": "passed"
 });
 formatter.match({
   "location": "ChangePinSteps.ClickConfirmButton()"
 });
 formatter.result({
-  "duration": 29400,
+  "duration": 30200,
   "status": "passed"
 });
 formatter.match({
@@ -187,7 +187,7 @@ formatter.match({
   "location": "ChangePinSteps.ShowEndMessage(String)"
 });
 formatter.result({
-  "duration": 54000,
+  "duration": 51700,
   "status": "passed"
 });
 formatter.uri("withdrawal.feature");
@@ -241,7 +241,7 @@ formatter.match({
   "location": "WithdrawalSteps.InsertCard(String)"
 });
 formatter.result({
-  "duration": 690000,
+  "duration": 649800,
   "status": "passed"
 });
 formatter.match({
@@ -254,7 +254,7 @@ formatter.match({
   "location": "WithdrawalSteps.ChooseAmount(String)"
 });
 formatter.result({
-  "duration": 83800,
+  "duration": 106800,
   "status": "passed"
 });
 formatter.match({
@@ -267,14 +267,14 @@ formatter.match({
   "location": "WithdrawalSteps.EnterPin(String)"
 });
 formatter.result({
-  "duration": 4024700,
+  "duration": 86700,
   "status": "passed"
 });
 formatter.match({
   "location": "WithdrawalSteps.ClickConfirmButton()"
 });
 formatter.result({
-  "duration": 93500,
+  "duration": 79000,
   "status": "passed"
 });
 formatter.match({
@@ -287,7 +287,7 @@ formatter.match({
   "location": "WithdrawalSteps.ShowEndMessage(String)"
 });
 formatter.result({
-  "duration": 102000,
+  "duration": 123800,
   "status": "passed"
 });
 formatter.scenario({
@@ -333,7 +333,7 @@ formatter.match({
   "location": "WithdrawalSteps.InsertCard(String)"
 });
 formatter.result({
-  "duration": 364200,
+  "duration": 247200,
   "status": "passed"
 });
 formatter.match({
@@ -346,7 +346,7 @@ formatter.match({
   "location": "WithdrawalSteps.ChooseAmount(String)"
 });
 formatter.result({
-  "duration": 75000,
+  "duration": 736300,
   "status": "passed"
 });
 formatter.match({
@@ -359,14 +359,14 @@ formatter.match({
   "location": "WithdrawalSteps.EnterPin(String)"
 });
 formatter.result({
-  "duration": 61200,
+  "duration": 63300,
   "status": "passed"
 });
 formatter.match({
   "location": "WithdrawalSteps.ClickConfirmButton()"
 });
 formatter.result({
-  "duration": 27000,
+  "duration": 33400,
   "status": "passed"
 });
 formatter.match({
@@ -379,7 +379,7 @@ formatter.match({
   "location": "WithdrawalSteps.ShowEndMessage(String)"
 });
 formatter.result({
-  "duration": 48900,
+  "duration": 64900,
   "status": "passed"
 });
 formatter.scenario({
@@ -425,7 +425,7 @@ formatter.match({
   "location": "WithdrawalSteps.InsertCard(String)"
 });
 formatter.result({
-  "duration": 271000,
+  "duration": 629500,
   "status": "passed"
 });
 formatter.match({
@@ -438,7 +438,7 @@ formatter.match({
   "location": "WithdrawalSteps.ChooseAmount(String)"
 });
 formatter.result({
-  "duration": 59900,
+  "duration": 67800,
   "status": "passed"
 });
 formatter.match({
@@ -451,14 +451,14 @@ formatter.match({
   "location": "WithdrawalSteps.EnterPin(String)"
 });
 formatter.result({
-  "duration": 602900,
+  "duration": 66900,
   "status": "passed"
 });
 formatter.match({
   "location": "WithdrawalSteps.ClickConfirmButton()"
 });
 formatter.result({
-  "duration": 44300,
+  "duration": 51700,
   "status": "passed"
 });
 formatter.match({
@@ -471,7 +471,7 @@ formatter.match({
   "location": "WithdrawalSteps.ShowEndMessage(String)"
 });
 formatter.result({
-  "duration": 62000,
+  "duration": 66600,
   "status": "passed"
 });
 });

@@ -11,6 +11,17 @@ public class AtmService {
 	static ArrayList<Account> accounts = new ArrayList<Account>();
 	static ArrayList<Card> cards = new ArrayList<Card>();
 
+	public static String handleOption(String option,String cardNumber,String amount,String pin, String newPin) {
+		switch(option) {
+			case "теглене на пари":
+				return withdrawalMoney(cardNumber,amount,pin);
+			case "Смяна на пин код":
+				return changePin(cardNumber,pin,newPin); 
+			default:
+				return "Няма намерена опция";
+		}
+		
+	}
 	
 	public static String withdrawalMoney(String cardNumber,String amount,String pin) {
 		initialize();
