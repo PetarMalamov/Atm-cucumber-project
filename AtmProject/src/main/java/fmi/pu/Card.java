@@ -4,12 +4,12 @@ public class Card {
 
 	private String number;
 	private String pin;
-	private double amount;
+	private String accountNumber;
 
-	public Card(String number,String pin,double amount) {
+	public Card(String number,String pin,String accountNumber) {
 		this.number = number;
 		this.pin = pin;
-		this.amount = amount;
+		this.accountNumber = accountNumber;
 	}
 
 	public String getNumber() {
@@ -28,12 +28,14 @@ public class Card {
 		this.pin = pin;
 	}
 
-	public double getAmount() {
-		return amount;
+	public String getAccountNumber() {
+		return accountNumber;
 	}
 
-	public void setAmount(double amount) {
-		this.amount = amount;
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
 	}
+
+
 	
 }

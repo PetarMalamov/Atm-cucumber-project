@@ -1,0 +1,37 @@
+import static org.junit.Assert.assertEquals;
+
+import Models.ChangePinModel;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class ChangePinSteps {
+	ChangePinModel model = new ChangePinModel();
+	
+//	@Given("^Потребителят поставя кредитна/дебитна карта с номер \"([^\"]*)\" в банкомата$")
+//	public void InsertCard(String cardNumber) throws Throwable {
+//		model.setCardNumber(cardNumber);
+//	}
+
+//	@When("^Въведе стар пин код \"([^\"]*)\"$")
+//	public void EnterOldPin(String pin) throws Throwable {
+//		model.setPin(pin);
+//	}
+//
+//	
+//	@When("^Въведе нов пин код \"([^\"]*)\"$")
+//	public void EnterNewPin(String newPin) throws Throwable {
+//		model.setNewPin(newPin);
+//	}
+//
+//	@When("^Натисне бутона за смяна на пин код$")
+//	public void натисне_бутона_за_смяна_на_пин_код() throws Throwable {
+//		model.handleConfirm();
+//	}
+//	
+//	@Then("^Показване на съобщение \"([^\"]*)\"$")
+//	public void ShowEndMessage(String expectedMessage) throws Throwable {
+//	    assertEquals(expectedMessage,model.getResponseMessage());
+//	}
+}

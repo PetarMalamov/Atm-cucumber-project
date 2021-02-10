@@ -3,49 +3,44 @@ package fmi.pu.Services;
 import java.awt.List;
 import java.util.ArrayList;
 
-import fmi.pu.Atm;
+import fmi.pu.Account;
 import fmi.pu.Card;
 
 public class AtmService {
 	
-	static Atm atm = new Atm();
+	static ArrayList<Account> accounts = new ArrayList<Account>();
+	static ArrayList<Card> cards = new ArrayList<Card>();
 
-	public static String handleOption(String option,String cardNumber,String amount,String pin, String newPin) {
-		switch(option) {
-			case "теглене на пари":
-				return withdrawalMoney(cardNumber,amount,pin);
-			case "Смяна на пин код":
-				return changePin(cardNumber,pin,newPin); 
-			default:
-				return "Няма намерена опция";
-		}
-		
-	}
 	
 	public static String withdrawalMoney(String cardNumber,String amount,String pin) {
-		ArrayList<Card> cards = getCards();
-		Card foundCard = findCard(cards,cardNumber);
+		initialize();
+		Card foundCard = findCard(cardNumber);
 		
 		if(foundCard == null) return "Няма намерена карта";
 		
 		if(!foundCard.getPin().equals(pin)) return "Невалиден пин код";
 		
-		double cardAmount = foundCard.getAmount();
-		double amountLeft = cardAmount - Double.parseDouble(amount);
+		Account foundAccount = findAccount(foundCard.getAccountNumber());
+		
+		if(foundAccount == null) return "Картата е невалидна";
+		
+		double accountBalance = foundAccount.getBalance();
+		double amountLeft = accountBalance - Double.parseDouble(amount);
 		
 		if(amountLeft < 0) return "Недостик на средства";
 		
-		foundCard.setAmount(amountLeft);
+		
+		foundAccount.setBalance(amountLeft);
 		
 		return "Успешна транзакция";
 	}
 	
 	public static String changePin(String cardNumber,String pin,String newPin) {
+		initialize();
 		
 		if(pin.equals(newPin)) return "Смяната на паролата беше неуспешна,не може новата и старата парола да са еднакви";
-		
-		ArrayList<Card> cards = getCards();
-		Card foundCard = findCard(cards,cardNumber);
+
+		Card foundCard = findCard(cardNumber);
 		
 		if(foundCard == null) return "Няма намерена карта";
 		
@@ -54,22 +49,27 @@ public class AtmService {
 		return "Смяната на паролата беше успешна";
 	}
 	
-	public static ArrayList<Card> getCards(){
-		Card card1 = new Card("asd123","1234",40000);
-		Card card2 = new Card("asd456","4312",120);
-		Card card3 = new Card("asd789","2233",312);
-		ArrayList<Card> cards = new ArrayList<Card>();
+	public static void initialize(){
+		Account account1 = new Account("iban1","Petar",4000);
+		accounts.add(account1);
+		
+		Card card1 = new Card("asd123","1234","iban1");
 		cards.add(card1);
-		cards.add(card2);
-		cards.add(card3);
-		return cards;
 	}
 	
-	private static Card findCard(ArrayList<Card> cards,String number) {
+	private static Card findCard(String number) {
 		Card foundCard = null;		
 		for(Card card : cards) {
 			if(card.getNumber().equals(number)) foundCard = card; 
 		}
 		return foundCard;
+	}
+	
+	private static Account findAccount(String number) {
+		Account foundAccount = null;		
+		for(Account account : accounts) {
+			if(account.getAccountNumber().equals(number)) foundAccount = account; 
+		}
+		return foundAccount;
 	}
 }

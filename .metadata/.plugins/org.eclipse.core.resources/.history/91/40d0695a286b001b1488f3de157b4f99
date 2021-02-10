@@ -1,0 +1,75 @@
+package fmi.pu.Services;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+import fmi.pu.Atm;
+import fmi.pu.Card;
+
+public class AtmService {
+	
+	static Atm atm = new Atm();
+
+	public static String handleOption(String option,String cardNumber,String amount,String pin, String newPin) {
+		switch(option) {
+			case "теглене на пари":
+				return withdrawalMoney(cardNumber,amount,pin);
+			case "Смяна на пин код":
+				return changePin(cardNumber,pin,newPin); 
+			default:
+				return "Няма намерена опция";
+		}
+		
+	}
+	
+	public static String withdrawalMoney(String cardNumber,String amount,String pin) {
+		ArrayList<Card> cards = getCards();
+		Card foundCard = findCard(cards,cardNumber);
+		
+		if(foundCard == null) return "Няма намерена карта";
+		
+		if(!foundCard.getPin().equals(pin)) return "Невалиден пин код";
+		
+		double cardAmount = foundCard.getAmount();
+		double amountLeft = cardAmount - Double.parseDouble(amount);
+		
+		if(amountLeft < 0) return "Недостик на средства";
+		
+		foundCard.setAmount(amountLeft);
+		
+		return "Успешна транзакция";
+	}
+	
+	public static String changePin(String cardNumber,String pin,String newPin) {
+		
+		if(pin.equals(newPin)) return "Смяната на паролата беше неуспешна,не може новата и старата парола да са еднакви";
+		
+		ArrayList<Card> cards = getCards();
+		Card foundCard = findCard(cards,cardNumber);
+		
+		if(foundCard == null) return "Няма намерена карта";
+		
+		foundCard.setPin(newPin);
+		
+		return "Смяната на паролата беше успешна";
+	}
+	
+	public static ArrayList<Card> getCards(){
+		Card card1 = new Card("asd123","1234",40000);
+		Card card2 = new Card("asd456","4312",120);
+		Card card3 = new Card("asd789","2233",312);
+		ArrayList<Card> cards = new ArrayList<Card>();
+		cards.add(card1);
+		cards.add(card2);
+		cards.add(card3);
+		return cards;
+	}
+	
+	private static Card findCard(ArrayList<Card> cards,String number) {
+		Card foundCard = null;		
+		for(Card card : cards) {
+			if(card.getNumber().equals(number)) foundCard = card; 
+		}
+		return foundCard;
+	}
+}

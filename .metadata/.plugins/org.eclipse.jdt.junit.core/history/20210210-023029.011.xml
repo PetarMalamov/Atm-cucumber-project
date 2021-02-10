@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AtmTester" project="AtmProject" tests="55" started="55" failures="0" errors="6" ignored="11">
+  <testsuite name="AtmTester" time="0.754">
+    <testsuite name="Feature: Теглене на пари" time="0.218">
+      <testsuite name="Scenario: Теглене на пари от банкомат с валидни данни" time="0.017">
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.005"/>
+        <testcase name="And Избере опция &quot;теглене на пари&quot;" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.002"/>
+        <testcase name="When Избере сума &quot;122&quot;" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.002"/>
+        <testcase name="And Въведе пин код &quot;1234&quot;" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.003"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.004"/>
+        <testcase name="Then Показване на съобщение &quot;Успешна транзакция&quot;" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.0"/>
+      </testsuite>
+      <testsuite name="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.022">
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.005"/>
+        <testcase name="And Избере опция &quot;теглене на пари&quot;" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.004"/>
+        <testcase name="When Избере сума &quot;222&quot;" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.002"/>
+        <testcase name="And Въведе пин код &quot;1233&quot;" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.002"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.008"/>
+        <testcase name="Then Показване на съобщение &quot;Невалиден пин код&quot;" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.001"/>
+      </testsuite>
+      <testsuite name="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.018">
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.001"/>
+        <testcase name="And Избере опция &quot;теглене на пари&quot;" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.001"/>
+        <testcase name="When Избере сума &quot;222321321&quot;" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.002"/>
+        <testcase name="And Въведе пин код &quot;1234&quot;" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.003"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.01"/>
+        <testcase name="Then Показване на съобщение &quot;Недостик на средства&quot;" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.0"/>
+      </testsuite>
+      <testsuite name="Scenario: Смяна на пин код" time="0.005">
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Смяна на пин код" time="0.0"/>
+        <testcase name="And Избере опция &quot;Смяна на пин код&quot;" classname="Scenario: Смяна на пин код" time="0.001"/>
+        <testcase name="When Въведе пин код &quot;1234&quot;" classname="Scenario: Смяна на пин код" time="0.001"/>
+        <testcase name="And Въведе нов пин код &quot;12333&quot;" classname="Scenario: Смяна на пин код" time="0.002"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Смяна на пин код" time="0.0"/>
+        <testcase name="Then Показване на съобщение &quot;Смяната на паролата беше успешна&quot;" classname="Scenario: Смяна на пин код" time="0.001"/>
+      </testsuite>
+      <testsuite name="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.007">
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.0"/>
+        <testcase name="And Избере опция &quot;Смяна на пин код&quot;" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.001"/>
+        <testcase name="When Въведе пин код &quot;1234&quot;" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.001"/>
+        <testcase name="And Въведе нов пин код &quot;1234&quot;" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.001"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.001"/>
+        <testcase name="Then Показване на съобщение &quot;Смяната на паролата беше неуспешна,не може новата и старата парола да са еднакви&quot;" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.003"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Feature: Смяна на пин код" time="0.153">
+      <testsuite name="Scenario: Смяна на пин код" time="0.095" incomplete="true">
+        <skipped/>
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Смяна на пин код" time="0.002"/>
+        <testcase name="When Въведе стар пин код &quot;1234&quot;" classname="Scenario: Смяна на пин код" time="0.003" ignored="true"/>
+        <testcase name="And Въведе нов пин код &quot;12342&quot;" classname="Scenario: Смяна на пин код" time="0.085" ignored="true"/>
+        <testcase name="And Натисне бутона за смяна на пин код" classname="Scenario: Смяна на пин код" time="0.003" ignored="true"/>
+        <testcase name="Then Показване на съобщение &quot;Смяната на паролата беше успешна&quot;" classname="Scenario: Смяна на пин код" time="0.002" ignored="true"/>
+      </testsuite>
+      <testsuite name="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.025" incomplete="true">
+        <skipped/>
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.001"/>
+        <testcase name="When Въведе стар пин код &quot;1234&quot;" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.001" ignored="true"/>
+        <testcase name="And Въведе нов пин код &quot;1234&quot;" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.021" ignored="true"/>
+        <testcase name="And Натисне бутона за смяна на пин код" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.002" ignored="true"/>
+        <testcase name="Then Показване на съобщение &quot;Смяната на паролата беше неуспешна,не може новата и старата парола да са еднакви&quot;" classname="Scenario: Смяна на пин код , когато стария пин е същия като новия" time="0.0" ignored="true"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Feature: Теглене на пари" time="0.268">
+      <testsuite name="Scenario: Теглене на пари от банкомат с валидни данни" time="0.01" incomplete="true">
+        <error>java.lang.NullPointerException&#13;
+	at fmi.pu.Services.AtmService.handleOption(AtmService.java:15)&#13;
+	at Models.AtmModel.handleConfirm(AtmModel.java:37)&#13;
+	at Steps.PressConfirmButton(Steps.java:40)&#13;
+	at ✽.And Натисне бутона за потвърждение(withdrawal.feature:7)&#13;
+&#13;
+</error>
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.001"/>
+        <testcase name="When Избере сума &quot;122&quot;" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.001"/>
+        <testcase name="And Въведе пин код &quot;1234&quot;" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.005"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.002">
+          <error>java.lang.NullPointerException&#13;
+	at fmi.pu.Services.AtmService.handleOption(AtmService.java:15)&#13;
+	at Models.AtmModel.handleConfirm(AtmModel.java:37)&#13;
+	at Steps.PressConfirmButton(Steps.java:40)&#13;
+	at ✽.And Натисне бутона за потвърждение(withdrawal.feature:7)&#13;
+&#13;
+</error>
+        </testcase>
+        <testcase name="Then Показване на съобщение &quot;Успешна транзакция&quot;" classname="Scenario: Теглене на пари от банкомат с валидни данни" time="0.003" ignored="true"/>
+      </testsuite>
+      <testsuite name="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.005" incomplete="true">
+        <error>java.lang.NullPointerException&#13;
+	at fmi.pu.Services.AtmService.handleOption(AtmService.java:15)&#13;
+	at Models.AtmModel.handleConfirm(AtmModel.java:37)&#13;
+	at Steps.PressConfirmButton(Steps.java:40)&#13;
+	at ✽.And Натисне бутона за потвърждение(withdrawal.feature:14)&#13;
+&#13;
+</error>
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.0"/>
+        <testcase name="When Избере сума &quot;222&quot;" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.004"/>
+        <testcase name="And Въведе пин код &quot;1233&quot;" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.001"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.0">
+          <error>java.lang.NullPointerException&#13;
+	at fmi.pu.Services.AtmService.handleOption(AtmService.java:15)&#13;
+	at Models.AtmModel.handleConfirm(AtmModel.java:37)&#13;
+	at Steps.PressConfirmButton(Steps.java:40)&#13;
+	at ✽.And Натисне бутона за потвърждение(withdrawal.feature:14)&#13;
+&#13;
+</error>
+        </testcase>
+        <testcase name="Then Показване на съобщение &quot;Невалиден пин код&quot;" classname="Scenario: Теглене на пари от банкомат с невалиден пин код" time="0.001" ignored="true"/>
+      </testsuite>
+      <testsuite name="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.021" incomplete="true">
+        <error>java.lang.NullPointerException&#13;
+	at fmi.pu.Services.AtmService.handleOption(AtmService.java:15)&#13;
+	at Models.AtmModel.handleConfirm(AtmModel.java:37)&#13;
+	at Steps.PressConfirmButton(Steps.java:40)&#13;
+	at ✽.And Натисне бутона за потвърждение(withdrawal.feature:21)&#13;
+&#13;
+</error>
+        <testcase name="Given Потребителят поставя кредитна/дебитна карта с номер &quot;asd123&quot; в банкомата" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.001"/>
+        <testcase name="When Избере сума &quot;222321321&quot;" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.003"/>
+        <testcase name="And Въведе пин код &quot;1234&quot;" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.016"/>
+        <testcase name="And Натисне бутона за потвърждение" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.001">
+          <error>java.lang.NullPointerException&#13;
+	at fmi.pu.Services.AtmService.handleOption(AtmService.java:15)&#13;
+	at Models.AtmModel.handleConfirm(AtmModel.java:37)&#13;
+	at Steps.PressConfirmButton(Steps.java:40)&#13;
+	at ✽.And Натисне бутона за потвърждение(withdrawal.feature:21)&#13;
+&#13;
+</error>
+        </testcase>
+        <testcase name="Then Показване на съобщение &quot;Недостик на средства&quot;" classname="Scenario: Теглене на пари от банкомат с недостик на средства" time="0.017" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>
